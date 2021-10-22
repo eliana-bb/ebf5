@@ -1,3 +1,3 @@
 ## EBF5 Capture Calculator
 
-![Capture](capture.png)
+<img src="capture.png" alt="capture" width="200"/>
