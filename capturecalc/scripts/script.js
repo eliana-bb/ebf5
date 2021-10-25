@@ -5,206 +5,11 @@ var Foes = [
     ["Snow Bat", 50], ["Bone Bat", 50], ["Electric Bat", 50], ["Rescue Dog", 45], ["Tanuki Dog", 45], ["Wolf Dog", 45], ["Zap Dog", 45], ["Mage Dog", 45], ["Brown Bear", 10], ["Black Bear", 10],
     ["Grolar Bear", 10], ["Panda Bear", 10], ["Camel Mammoth", 5], ["Wooly Mammoth", 5], ["War Mammoth", 5], ["Wooden Idol", 70], ["Gem Idol", 70], ["Metal Idol", 70], ["Stone Idol", 70], ["Stumpy Gloop", 36],
 
-    [
-        "Roasted Gloop",
-        36
-    ],
-    [
-        "Fabulous Gloop",
-        26
-    ],
-    [
-        "Hardy Gloop",
-        36
-    ],
-    [
-        "Chunky Gloop",
-        36
-    ],
-    [
-        "Fire Sprite",
-        42
-    ],
-    [
-        "Ice Sprite",
-        42
-    ],
-    [
-        "Rock Sprite",
-        42
-    ],
-    [
-        "Thunder Sprite",
-        42
-    ],
-    [
-        "Wind Sprite",
-        42
-    ],
-    [
-        "Leafy Chomper",
-        9
-    ],
-    [
-        "Magma Chomper",
-        9
-    ],
-    [
-        "Seaweed Chomper",
-        9
-    ],
-    [
-        "Mutant Chomper",
-        9
-    ],
-    [
-        "Pink Squid",
-        7
-    ],
-    [
-        "Purple Squid",
-        7
-    ],
-    [
-        "Lime Squid",
-        7
-    ],
-    [
-        "Thorny Creep",
-        20
-    ],
-    [
-        "Icicle Creep",
-        20
-    ],
-    [
-        "Hermit Creep",
-        20
-    ],
-    [
-        "Green Creep",
-        20
-    ],
-    [
-        "Red Creep",
-        20
-    ],
-    [
-        "Blue Creep",
-        20
-    ],
-    [
-        "Steam Fish",
-        38
-    ],
-    [
-        "Jet Fish",
-        38
-    ],
-    [
-        "Gold Fish",
-        38
-    ],
-    [
-        "Red Flybot",
-        16
-    ],
-    [
-        "Yellow Flybot",
-        16
-    ],
-    [
-        "Blue Flybot",
-        16
-    ],
-    [
-        "Defender Mk III",
-        6
-    ],
-    [
-        "Bubbler MX-01",
-        6
-    ],
-    [
-        "Prototype 9X",
-        6
-    ],
-    [
-        "Flame Wraith",
-        25
-    ],
-    [
-        "Frost Wraith",
-        25
-    ],
-    [
-        "Leaf Wraith",
-        25
-    ],
-    [
-        "Steel Wraith",
-        25
-    ],
-    [
-        "Origami Wraith",
-        25
-    ],
-    [
-        "Master Wraith",
-        25
-    ],
-    [
-        "Haunted Mirror",
-        32
-    ],
-    [
-        "Wise Mirror",
-        32
-    ],
-    [
-        "Demon Mirror",
-        32
-    ],
-    [
-        "Angel Mirror",
-        32
-    ],
-    [
-        "Zombie Hand",
-        35
-    ],
-    [
-        "Magma Hand",
-        35
-    ],
-    [
-        "Skeleton Hand",
-        35
-    ],
-    [
-        "Burned Fallen",
-        13
-    ],
-    [
-        "Lost Fallen",
-        13
-    ],
-    [
-        "Crucified Fallen",
-        13
-    ],
-    [
-        "Drowned Fallen",
-        13
-    ],
-    [
-        "Beheaded Fallen",
-        13
-    ],
-    [
-        "Matt Doll",
-        23
-    ]
+    ["Roasted Gloop", 36], ["Fabulous Gloop", 26], ["Hardy Gloop", 36], ["Chunky Gloop", 36], ["Fire Sprite", 42], ["Ice Sprite", 42], ["Rock Sprite", 42], ["Thunder Sprite", 42], ["Wind Sprite", 42], ["Leafy Chomper", 9], 
+    ["Magma Chomper", 9], ["Seaweed Chomper", 9], ["Mutant Chomper", 9], ["Pink Squid", 7], ["Purple Squid", 7], ["Lime Squid", 7], ["Thorny Creep", 20], ["Icicle Creep", 20], ["Hermit Creep", 20], ["Green Creep", 20], 
+    ["Red Creep", 20], ["Blue Creep", 20], ["Steam Fish", 38], ["Jet Fish", 38], ["Gold Fish", 38], ["Red Flybot", 16], ["Yellow Flybot", 16], ["Blue Flybot", 16], ["Defender Mk III", 6], ["Bubbler MX-01", 6], 
+    ["Prototype 9X", 6], ["Flame Wraith", 25], ["Frost Wraith", 25], ["Leaf Wraith", 25], ["Steel Wraith", 25], ["Origami Wraith", 25], ["Master Wraith", 25], ["Haunted Mirror", 32], ["Wise Mirror", 32], ["Demon Mirror", 32], 
+    ["Angel Mirror", 32], ["Zombie Hand", 35], ["Magma Hand", 35], ["Skeleton Hand", 35], ["Burned Fallen", 13], ["Lost Fallen", 13], ["Crucified Fallen", 13], ["Drowned Fallen", 13], ["Beheaded Fallen", 13], ["Matt Doll", 23]
 ]
 
 var curname = "None Selected";
@@ -245,11 +50,11 @@ function openFoeSelect() {
             d.appendChild(document.createElement("br"));
         }
         lbutton = document.createElement("button");
-        lbutton.setAttribute("onClick", "function() {curpage--; closeFoeSelect(); openFoeSelect();}")
-        lbutton.innerText = "Left"
+        lbutton.setAttribute("onClick", "{curpage--; closeFoeSelect(); openFoeSelect();}")
+        lbutton.innerText = "<"
         rbutton = document.createElement("button");
-        rbutton.setAttribute("onClick", "function() {curpage++; closeFoeSelect(); openFoeSelect();}")
-        rbutton.innerText = "Right"
+        rbutton.setAttribute("onClick", "{curpage++; closeFoeSelect(); openFoeSelect();}")
+        rbutton.innerText = ">"
         lbutton.disabled = (curpage == 0);
         rbutton.disabled = (curpage == 4);
         d.appendChild(lbutton);
