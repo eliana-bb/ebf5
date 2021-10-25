@@ -1,9 +1,15 @@
 html {
     font-size: 16px;
     font-family: "Roboto", sans-serif;
-    margin: auto 60px;
+    margin: auto 30%;
 }
 h1 {
     text-align: center;
     font-size: 32px;
+}
+div {
+    padding-block: 10px;
+}
+img {
+    margin: 5px;
 }
