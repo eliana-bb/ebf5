@@ -57,18 +57,16 @@ function openFoeSelect() {
         d.id = "foeSelectPg"
         bigdiv.appendChild(d)
         for (let i = 0; i < 50; i++) {
-            if (50*curpage+i <= 215) {
-                im = document.createElement("img");
-                im.src = "imgs/foes/" + (50 * curpage + i) + ".png";
-                im.addEventListener('click', selectFoe)
-                im.setAttribute("foeID", (50 * curpage + i))
-                d.appendChild(im);
-                if (i % 10 == 9) { d.appendChild(document.createElement("br")) }
-            }
+
+            im = document.createElement("img");
+            im.src = "imgs/foes/" + (50 * curpage + i) + ".png";
+            im.addEventListener('click', selectFoe)
+            im.setAttribute("foeID", (50 * curpage + i))
+            d.appendChild(im);
+            if (i % 10 == 9) { d.appendChild(document.createElement("br")) }
+
         }
-        if (curpage == 4) {
-            d.appendChild(document.createElement("br"))
-        }
+
         lbutton = document.createElement("button");
         lbutton.setAttribute("onClick", "{curpage--; closeFoeSelect(); openFoeSelect();}")
         lbutton.innerText = "<"
